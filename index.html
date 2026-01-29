@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SimpleAI Ops | We Run AI for Your Business</title>
-  <meta name="description" content="SimpleAI Ops helps small businesses save time by running AI-powered operations like customer replies, content, and follow-ups." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SimpleAI Ops | AI Operator Agency</title>
+  <meta name="description" content="SimpleAI Ops helps businesses save time by running AI-powered tasks such as customer replies, social media content, and follow-ups.">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; background:#f5f7fb; color:#1f2933; }
-    .container { max-width:1100px; margin:auto; padding:40px 20px; }
-    header { background:linear-gradient(135deg,#0f172a,#1e3a8a); color:#fff; }
-    h1,h2,h3 { margin-bottom:12px; }
-    p { line-height:1.6; }
-    .btn { display:inline-block; padding:14px 22px; background:#2563eb; color:#fff; text-decoration:none; border-radius:8px; font-weight:bold; }
-    .btn.secondary { background:#0f172a; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:24px; }
-    .card { background:#fff; border-radius:14px; padding:24px; box-shadow:0 10px 30px rgba(0,0,0,0.08); }
-    .hero { display:grid; grid-template-columns:1.2fr 1fr; gap:40px; align-items:center; }
-    .hero img { width:100%; border-radius:18px; }
-    footer { background:#0f172a; color:#cbd5e1; text-align:center; padding:30px 20px; }
-    @media(max-width:900px){ .hero{grid-template-columns:1fr;} }
+    /* Reset and global styles */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Inter', sans-serif; line-height:1.6; color:#1f2933; background:#f8fafc; }
+    a { text-decoration:none; color:inherit; }
+    .container { max-width:1200px; margin:0 auto; padding:40px 20px; }
+
+    /* Header / Hero */
+    header { background:linear-gradient(135deg,#0f172a,#1e3a8a); color:#fff; padding:80px 20px; }
+    header .hero { display:flex; flex-wrap:wrap; align-items:center; gap:40px; }
+    header h1 { font-size:3rem; font-weight:700; margin-bottom:20px; }
+    header p { font-size:1.25rem; margin-bottom:30px; }
+    header .btn { display:inline-block; padding:16px 28px; border-radius:10px; font-weight:600; background:#2563eb; color:#fff; transition:0.3s; }
+    header .btn:hover { background:#1e40af; }
+
+    header .hero img { flex:1; border-radius:20px; max-width:100%; }
+
+    /* Sections */
+    section { padding:80px 20px; }
+    section h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; font-weight:700; color:#0f172a; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
+    .card { background:#fff; border-radius:20px; padding:30px; box-shadow:0 15px 35px rgba(0,0,0,0.08); transition:0.3s; }
+    .card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
+    .card h3 { margin-bottom:15px; font-size:1.5rem; color:#1e3a8a; }
+    .card p { color:#4b5563; }
+
+    /* Buttons */
+    .btn-primary { background:#2563eb; color:#fff; padding:14px 24px; border-radius:12px; font-weight:600; display:inline-block; transition:0.3s; }
+    .btn-primary:hover { background:#1e40af; }
+    .btn-secondary { background:#0f172a; color:#fff; padding:14px 24px; border-radius:12px; font-weight:600; display:inline-block; transition:0.3s; }
+    .btn-secondary:hover { background:#1e293b; }
+
+    /* Footer */
+    footer { background:#0f172a; color:#cbd5e1; text-align:center; padding:50px 20px; }
+
+    @media(max-width:900px){ header .hero { flex-direction:column; text-align:center; } }
   </style>
 </head>
 <body>
@@ -28,73 +51,58 @@
     <div>
       <h1>We Run AI for Your Business</h1>
       <p>SimpleAI Ops helps busy businesses save time, respond faster, and stay consistent using AI — without you needing to learn anything technical.</p>
-      <a href="https://wa.me/27623255791" class="btn">WhatsApp Us</a>
-      <a href="#services" class="btn secondary">Our Services</a>
+      <a href="https://wa.me/27623255791" class="btn btn-primary">WhatsApp Us</a>
+      <a href="#services" class="btn btn-secondary">Our Services</a>
     </div>
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Business support" />
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Business support">
   </div>
 </header>
 
-<section class="container">
-  <h2>What We Do</h2>
-  <p>You send us tasks. We use AI. We clean the output. You get professional results — fast.</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Customer Replies</h3>
-      <p>WhatsApp and email responses that are clear, polite, and on-brand.</p>
-    </div>
-    <div class="card">
-      <h3>Content Support</h3>
-      <p>Social media posts, captions, and announcements — done for you.</p>
-    </div>
-    <div class="card">
-      <h3>Follow-Ups & Admin</h3>
-      <p>Client follow-ups, summaries, rewrites, and thinking tasks handled with AI.</p>
-    </div>
-  </div>
-</section>
-
-<section id="services" class="container">
-  <h2>Monthly Packages</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Starter</h3>
-      <p><strong>R2,000 / month</strong></p>
-      <p>Light AI support for replies and writing tasks.</p>
-    </div>
-    <div class="card">
-      <h3>Standard</h3>
-      <p><strong>R4,000 / month</strong></p>
-      <p>Daily support for messages, content, and admin tasks.</p>
-    </div>
-    <div class="card">
-      <h3>Premium</h3>
-      <p><strong>R6,000 / month</strong></p>
-      <p>Priority AI operations and fast turnaround.</p>
+<section>
+  <div class="container">
+    <h2>What We Do</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Customer Replies</h3>
+        <p>WhatsApp and email responses that are clear, polite, and on-brand, all handled through AI.</p>
+      </div>
+      <div class="card">
+        <h3>Content Support</h3>
+        <p>Social media posts, captions, and announcements created and delivered ready-to-use.</p>
+      </div>
+      <div class="card">
+        <h3>Follow-Ups & Admin</h3>
+        <p>Client follow-ups, summaries, rewrites, and other daily tasks processed efficiently with AI.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="container">
-  <h2>Why SimpleAI Ops?</h2>
-  <div class="grid">
-    <div class="card"><p>No contracts. Cancel anytime.</p></div>
-    <div class="card"><p>No tech skills required.</p></div>
-    <div class="card"><p>Human-reviewed AI output.</p></div>
-    <div class="card"><p>Affordable and practical.</p></div>
+<section id="services">
+  <div class="container">
+    <h2>Monthly Packages</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Starter</h3>
+        <p><strong>R2,000 / month</strong></p>
+        <p>Light AI support for replies and writing tasks.</p>
+      </div>
+      <div class="card">
+        <h3>Standard</h3>
+        <p><strong>R4,000 / month</strong></p>
+        <p>Daily support for messages, content, and admin tasks.</p>
+      </div>
+      <div class="card">
+        <h3>Premium</h3>
+        <p><strong>R6,000 / month</strong></p>
+        <p>Priority AI operations with fast turnaround.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<section class="container">
-  <h2>Get Started</h2>
-  <p>Try SimpleAI Ops risk-free. Let us handle the thinking so you can focus on running your business.</p>
-  <a href="https://wa.me/27623255791" class="btn">Start Free 7-Day Trial</a>
-</section>
-
-<footer>
-  <p>SimpleAI Ops © 2026</p>
-  <p>Call or WhatsApp: +27 62 325 5791</p>
-</footer>
-
-</body>
-</html>
+<section>
+  <div class="container">
+    <h2>Why SimpleAI Ops?</h2>
+    <div class="grid">
+      <div class="card"><p>No contracts. Cancel anytime.</
