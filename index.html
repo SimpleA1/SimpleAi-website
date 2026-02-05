@@ -1,187 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SimpleAI Ops | Your AI Operator Agency</title>
-  <meta name="description" content="SimpleAI Ops saves businesses time and money by running AI-powered tasks like customer replies, social media content, follow-ups, and admin support.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    /* Global Reset */
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family: 'Inter', sans-serif; line-height:1.6; color:#1f2933; background:#f8fafc; }
-    a { text-decoration:none; color:inherit; }
-    h1,h2,h3,h4,h5,h6 { font-weight:700; }
-    p { margin-bottom:16px; }
-    .container { max-width:1200px; margin:0 auto; padding:40px 20px; }
-    .btn { display:inline-block; padding:16px 28px; border-radius:12px; font-weight:600; transition:0.3s; cursor:pointer; }
-    .btn-primary { background:#2563eb; color:#fff; }
-    .btn-primary:hover { background:#1e40af; }
-    .btn-secondary { background:#0f172a; color:#fff; }
-    .btn-secondary:hover { background:#1e293b; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YenzaAI Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
 
-    /* Header / Hero */
-    header { background:linear-gradient(135deg,#0f172a,#1e3a8a); color:#fff; padding:100px 20px; }
-    header .hero { display:flex; flex-wrap:wrap; align-items:center; gap:50px; }
-    header h1 { font-size:3.5rem; margin-bottom:20px; }
-    header p { font-size:1.25rem; margin-bottom:30px; }
-    header .hero img { flex:1; border-radius:20px; max-width:100%; }
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-    /* Sections */
-    section { padding:80px 20px; }
-    section h2 { text-align:center; font-size:2.5rem; margin-bottom:40px; color:#0f172a; }
+        header img {
+            max-width: 200px;
+            height: auto;
+        }
 
-    /* Cards */
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; }
-    .card { background:#fff; border-radius:20px; padding:30px; box-shadow:0 15px 35px rgba(0,0,0,0.08); transition:0.3s; }
-    .card:hover { transform:translateY(-5px); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
-    .card h3 { margin-bottom:15px; color:#1e3a8a; }
-    .card p { color:#4b5563; }
+        nav {
+            background-color: #333;
+        }
 
-    /* Testimonials */
-    .testimonial { background:#fff; border-radius:20px; padding:30px; box-shadow:0 15px 35px rgba(0,0,0,0.08); text-align:center; }
-    .testimonial p { font-style:italic; color:#374151; }
-    .testimonial h4 { margin-top:15px; color:#1e3a8a; }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
 
-    /* FAQ */
-    .faq-item { margin-bottom:30px; }
-    .faq-item h4 { font-size:1.25rem; margin-bottom:8px; color:#1e3a8a; }
-    .faq-item p { color:#4b5563; }
+        nav li {
+            margin: 0 15px;
+        }
 
-    /* Footer */
-    footer { background:#0f172a; color:#cbd5e1; text-align:center; padding:50px 20px; }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
 
-    @media(max-width:900px){ header .hero { flex-direction:column; text-align:center; } }
-  </style>
+        .hero {
+            background: linear-gradient(90deg, #6a0dad, #00c3b2);
+            color: #fff;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        .services, .about, .contact {
+            background-color: #fff;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .services div {
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact button {
+            padding: 10px;
+            background-color: #1a1a1a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- Hero Section -->
-<header>
-  <div class="container hero">
-    <div>
-      <h1>We Run AI for Your Business — So You Can Focus on Growth</h1>
-      <p>SimpleAI Ops saves busy business owners hours every day by handling customer replies, social media, follow-ups, and admin tasks using AI — no tech skills needed.</p>
-      <a href="https://wa.me/27623255791" class="btn btn-primary">Start Free 7-Day Trial</a>
-      <a href="#services" class="btn btn-secondary">See Our Services</a>
-    </div>
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Business support">
-  </div>
-</header>
+    <header>
+        <img src="9332c72b-ffeb-464c-8e04-6169e501789a.png" alt="YenzaAI Solutions Logo">
+    </header>
 
-<!-- Problem Section -->
-<section>
-  <div class="container">
-    <h2>The Problem Business Owners Face</h2>
-    <p>Most business owners are overwhelmed. You spend hours every day replying to messages, creating content, and following up with clients — leaving little time to actually grow your business.</p>
-    <p>Hiring full-time staff is expensive, and learning AI tools yourself takes months of trial and error.</p>
-    <p>That’s where <strong>SimpleAI Ops</strong> comes in — your dedicated AI operator who executes tasks for you quickly and reliably.</p>
-  </div>
-</section>
+    <nav>
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<!-- Solution Section -->
-<section>
-  <div class="container">
-    <h2>Our Solution</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Customer Replies</h3>
-        <p>We handle your WhatsApp and email replies using AI, so your clients always get timely and professional responses.</p>
-      </div>
-      <div class="card">
-        <h3>Social Media Content</h3>
-        <p>Create ready-to-post captions, announcements, and promotions without spending hours thinking or writing.</p>
-      </div>
-      <div class="card">
-        <h3>Follow-Ups & Admin</h3>
-        <p>We summarize emails, send follow-ups, and handle repetitive admin tasks so you can focus on high-value work.</p>
-      </div>
+    <div class="hero">
+        <h1>Transforming Businesses with AI</h1>
+        <p>We build intelligent solutions to streamline processes and unlock data-driven insights.</p>
     </div>
-  </div>
-</section>
 
-<!-- Packages Section -->
-<section id="services">
-  <div class="container">
-    <h2>Choose Your Package</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Starter</h3>
-        <p><strong>R2,000 / month</strong></p>
-        <p>Light AI support for basic replies and content.</p>
-      </div>
-      <div class="card">
-        <h3>Standard</h3>
-        <p><strong>R4,000 / month</strong></p>
-        <p>Daily support for messages, content, and admin tasks.</p>
-      </div>
-      <div class="card">
-        <h3>Premium</h3>
-        <p><strong>R6,000 / month</strong></p>
-        <p>Priority AI operations with fast turnaround and full support.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div>
+            <h3>AI Automation</h3>
+            <p>Streamline your business processes with cutting-edge AI automation solutions.</p>
+        </div>
+        <div>
+            <h3>Data Analysis</h3>
+            <p>Unlock insights from your data to make smarter business decisions.</p>
+        </div>
+        <div>
+            <h3>Custom AI Solutions</h3>
+            <p>We develop tailored AI systems to solve unique challenges for your business.</p>
+        </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section>
-  <div class="container">
-    <h2>What Our Clients Say</h2>
-    <div class="grid">
-      <div class="testimonial">
-        <p>“I was drowning in messages and emails before SimpleAI Ops. Now everything runs smoothly, and I finally have time to grow my business!”</p>
-        <h4>— Sarah M., Salon Owner</h4>
-      </div>
-      <div class="testimonial">
-        <p>“The AI support is incredible. Posts, replies, and follow-ups are always professional. I couldn’t imagine running my business without them.”</p>
-        <h4>— Thabo K., Fitness Coach</h4>
-      </div>
-      <div class="testimonial">
-        <p>“I thought AI was too complicated, but SimpleAI Ops made it easy. The weekly results speak for themselves.”</p>
-        <h4>— Lerato P., Small Shop Owner</h4>
-      </div>
-    </div>
-  </div>
-</section>
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>YenzaAI Solutions is dedicated to helping businesses harness the power of Artificial Intelligence. Our mission is to simplify complex AI technologies and make them accessible to businesses of all sizes.</p>
+    </section>
 
-<!-- FAQ Section -->
-<section>
-  <div class="container">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq-item">
-      <h4>Do I need any technical knowledge?</h4>
-      <p>No. You simply send us tasks, and we use AI to complete them professionally.</p>
-    </div>
-    <div class="faq-item">
-      <h4>How quickly can you respond to tasks?</h4>
-      <p>Depending on your package, tasks are handled within 24 hours or faster for priority clients.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Can I cancel anytime?</h4>
-      <p>Absolutely. There are no long-term contracts.</p>
-    </div>
-    <div class="faq-item">
-      <h4>Which businesses can use SimpleAI Ops?</h4>
-      <p>Any business that needs help with messages, content, follow-ups, or admin. Common clients include salons, gyms, shops, coaches, and churches.</p>
-    </div>
-  </div>
-</section>
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
 
-<!-- Call to Action -->
-<section>
-  <div class="container" style="text-align:center;">
-    <h2>Ready to Save Time and Grow Your Business?</h2>
-    <p>Start your free 7-day trial today and see the difference AI can make for your business.</p>
-    <a href="https://wa.me/27623255791" class="btn btn-primary">Start Free Trial Now</a>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>SimpleAI Ops © 2026</p>
-  <p>Call or WhatsApp: +27 62 325 5791</p>
-</footer>
+    <footer>
+        &copy; 2026 YenzaAI Solutions | All rights reserved
+    </footer>
 
 </body>
 </html>
