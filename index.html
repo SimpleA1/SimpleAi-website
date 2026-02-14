@@ -1,281 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YenzaAI Solutions</title>
-
-    <!-- SEO Meta -->
-    <meta name="description" content="YenzaAI Solutions automates businesses with AI solutions for smarter workflows.">
-    <meta property="og:title" content="YenzaAI Solutions">
-    <meta property="og:description" content="Transforming Businesses with AI Automation, Data Analysis, and Custom AI Solutions.">
-    <meta property="og:image" content="9332c72b-ffeb-464c-8e04-6169e501789a.png">
-    <meta property="og:type" content="website">
-
-    <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-            color: #333;
-            scroll-behavior: smooth;
-        }
-
-        header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        header img {
-            max-width: 200px;
-            height: auto;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #333;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 15px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 15px 0;
-            display: block;
-        }
-
-        nav a.active {
-            border-bottom: 2px solid #00c3b2;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(90deg, #6a0dad, #00c3b2);
-            color: #fff;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-        }
-
-        .hero-btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 25px;
-            background-color: #fff;
-            color: #6a0dad;
-            font-weight: bold;
-            border-radius: 5px;
-            text-decoration: none;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .hero-btn:hover {
-            background-color: #ddd;
-            transform: scale(1.05);
-        }
-
-        /* Sections */
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        section h2 {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #1a1a1a;
-        }
-
-        .services, .about, .contact {
-            background-color: #fff;
-            margin-bottom: 30px;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-
-        /* Service Cards */
-        .services .service-card {
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .services .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .services .service-card h3 {
-            margin-top: 0;
-            color: #6a0dad;
-        }
-
-        /* Contact Form */
-        .contact form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact input, .contact textarea {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .contact button {
-            padding: 12px;
-            background-color: #1a1a1a;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-
-        .contact button:hover {
-            background-color: #333;
-            transform: scale(1.03);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        /* WhatsApp Floating Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            z-index: 1000;
-            border-radius: 50%;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-            background-color: #25D366;
-        }
-
-        .whatsapp-btn img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideInLeft {
-            0% { opacity: 0; transform: translateX(-50px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-
-        .animate {
-            opacity: 0;
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 1s forwards;
-        }
-
-        .slide-in-left {
-            animation: slideInLeft 1s forwards;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            nav ul { flex-direction: column; }
-            nav li { margin: 10px 0; }
-            .hero h1 { font-size: 2rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YenzaAI - AI Automation for Service Businesses</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; color:#333; line-height:1.6; }
+    header { background:#007BFF; color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin:0; font-size:2.5em; }
+    header p { font-size:1.2em; margin:10px 0 20px; }
+    header a { background:#fff; color:#007BFF; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:5px; }
+    section { padding:60px 20px; max-width:800px; margin:0 auto; }
+    h2 { text-align:center; color:#007BFF; }
+    ul { list-style-type: none; padding:0; }
+    ul li { margin:10px 0; padding-left:20px; position:relative; }
+    ul li::before { content: "✔"; position:absolute; left:0; color:#007BFF; font-weight:bold; }
+    .steps { display:grid; grid-template-columns:1fr; gap:30px; text-align:center; }
+    @media(min-width: 600px){ .steps { grid-template-columns: repeat(2, 1fr); } }
+    .step { padding:20px; border:1px solid #ddd; border-radius:8px; }
+    .cta-section { text-align:center; background:#f2f2f2; padding:60px 20px; }
+    .cta-section a { background:#007BFF; color:#fff; padding:15px 30px; text-decoration:none; font-weight:bold; border-radius:5px; }
+    footer { text-align:center; padding:20px; font-size:0.9em; color:#666; }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <img src="9332c72b-ffeb-464c-8e04-6169e501789a.png" alt="YenzaAI Solutions Logo">
-    </header>
+  <!-- Hero Section -->
+  <header>
+    <h1>YenzaAI</h1>
+    <p>Automate your leads, qualify prospects, and book discovery calls instantly.</p>
+    <a href="https://wa.me/27694620235" target="_blank">Message us on WhatsApp</a>
+  </header>
 
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="#services" class="nav-link">Services</a></li>
-            <li><a href="#about" class="nav-link">About Us</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- About Section -->
+  <section id="about">
+    <h2>What We Do</h2>
+    <p>YenzaAI helps service-based businesses automate lead responses, qualify prospects automatically, and book discovery calls — all through WhatsApp.</p>
+    <ul>
+      <li>Respond to leads instantly 24/7</li>
+      <li>Automatically qualify high-quality leads</li>
+      <li>Book discovery calls without manual follow-up</li>
+    </ul>
+  </section>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1 class="animate fade-in-up">Transform Your Business with AI That Works for You</h1>
-        <p class="animate fade-in-up" style="animation-delay:0.3s;">YenzaAI Solutions helps service-based businesses save time, boost efficiency, and make smarter decisions with intelligent AI automation and data insights.</p>
-        <a href="#contact" class="hero-btn animate fade-in-up" style="animation-delay:0.6s;">Get Started Today</a>
+  <!-- How It Works Section -->
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>Step 1</h3>
+        <p>Lead messages us on WhatsApp.</p>
+      </div>
+      <div class="step">
+        <h3>Step 2</h3>
+        <p>YenzaAI qualifies the lead automatically.</p>
+      </div>
+      <div class="step">
+        <h3>Step 3</h3>
+        <p>Lead books a discovery call via our calendar.</p>
+      </div>
+      <div class="step">
+        <h3>Step 4</h3>
+        <p>Human follow-up if needed.</p>
+      </div>
     </div>
+  </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2 class="animate fade-in-up">Our Services</h2>
-        <div class="service-card animate" style="animation-delay:0.2s;">
-            <h3>AI Automation</h3>
-            <p>Stop wasting time on repetitive tasks. Our AI-powered automation streamlines workflows, manages customer interactions, and frees your team to focus on what really matters—growing your business.</p>
-        </div>
-        <div class="service-card animate" style="animation-delay:0.4s;">
-            <h3>Data Analysis</h3>
-            <p>Turn raw data into actionable insights. We help you understand your business trends, predict customer behavior, and make informed decisions that drive profits.</p>
-        </div>
-        <div class="service-card animate" style="animation-delay:0.6s;">
-            <h3>Custom AI Solutions</h3>
-            <p>Every business is different. We build custom AI solutions that solve your specific challenges—from automating complex processes to analyzing data in ways that matter most to your growth.</p>
-        </div>
-    </section>
+  <!-- Testimonials Section (Optional) -->
+  <section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>"YenzaAI transformed how we handle leads! Our discovery calls doubled in just one month." – Jane D.</p>
+    <p>"Automating lead qualification saved our team hours every week." – Mark R.</p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2 class="animate fade-in-up">About Us</h2>
-        <p class="animate fade-in-up" style="animation-delay:0.3s;">At YenzaAI Solutions, we believe that every business, big or small, deserves access to the power of Artificial Intelligence. Our mission is to simplify complex AI technologies and provide practical solutions that save time, increase efficiency, and unlock business growth. We focus on building tools that actually work for service-based businesses, delivering measurable results.</p>
+  <!-- Call-to-Action Section -->
+  <section class="cta-section">
+    <h2>Ready to Automate Your Leads?</h2>
+    <p>Message us on WhatsApp now to book your discovery call!</p>
+    <a href="https://wa.me/27694620235" target="_blank">Message us on WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 YenzaAI. All rights reserved.
+  </footer>
+
+</body>
+</html>
